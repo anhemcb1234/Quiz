@@ -10,11 +10,6 @@ const Login = () => {
 
   let navigate = useNavigate();
 
-  useEffect(() => {
-    if(localStorage.getItem('token')) {
-      navigate('/choose-quiz')
-    }
-  },[])
 
   const handlerLogin = async () => {
     try {
