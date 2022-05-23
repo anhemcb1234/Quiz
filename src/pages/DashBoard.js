@@ -4,8 +4,8 @@ import { Link, useNavigate, useSearchParams } from "react-router-dom";
 
 function DashBoard() {
   const [data, setData] = useState([]);
-  const [searchParam] = useSearchParams();
   const [result, setResult] = useState([]);
+  const [searchParam] = useSearchParams();
   const [resultAnswer, setResultAnswer] = useState([]);
   const [idUser, setIdUser] = useState(() => {
     return localStorage.getItem("idUser");
