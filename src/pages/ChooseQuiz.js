@@ -269,7 +269,7 @@ export default function ChooseQuiz() {
                 </svg>
               </div>
               <div className="text-right">
-                <p className="text-2xl">{exams.length}</p>
+                <p className="text-2xl">{exams.length - 1}</p>
                 <p>Total exam</p>
               </div>
             </div>
