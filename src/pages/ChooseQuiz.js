@@ -126,7 +126,7 @@ export default function ChooseQuiz() {
                 </div>
               </li>
               <li>
-                <Link to={`/dashboard?UserName=${userName}`}>
+                <Link to={`/dashboard`}>
                   <a
                     href="#"
                     className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-violet-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-violet-500 dark:hover:border-gray-800 pr-6"
@@ -247,7 +247,7 @@ export default function ChooseQuiz() {
               </div>
               <div className="text-right">
                 <p className="text-2xl">{data.length}</p>
-                <p>User</p>
+                <p>Total user</p>
               </div>
             </div>
             <div className="bg-violet-500 dark:bg-gray-800 shadow-lg rounded-md flex items-center justify-between p-3 border-b-4 border-violet-600 dark:border-gray-600 text-white font-medium group">
