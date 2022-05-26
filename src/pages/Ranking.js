@@ -66,23 +66,23 @@ function Ranking() {
       ) : (
         <>
           <div className="w-full  h-screen">
-            <div className="h-sreen m-10 bg-white shadow-lg rounded-sm border border-gray-200">
+            <div className="h-sreen m-10 bg-white shadow-lg rounded-sm  ">
               <div className="flex p-4 justify-between mb-10">
-                <header className="px-5 py-4 border-b border-gray-100">
-                  <h2 className="font-semibold text-gray-800">Ranking User</h2>
+                <header className="px-5 py-4 ">
+                  <h2 className="font-semibold sm:text-sm md:text-xl xl:text-3xl lg:text-3xl  text-gray-800">Ranking User</h2>
                 </header>
                 <Link to="/choose-quiz">
                   <button
                     type="button"
-                    className="border border-red-500 bg-red-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline"
+                    className="border sm:h-4 md:h-4  border-red-500 bg-red-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline"
                   >
                     Go to home page
                   </button>
                 </Link>
               </div>
-              <div className="">
-                <div className="overflow-x-auto">
-                  <table className="table-auto w-full">
+              <div className="mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
+                <div className="inline-block min-w-full shadow rounded-lg overflow-hidden">
+                  <table className="min-w-full leading-normal">
                     <thead className="text-xs font-semibold uppercase text-gray-400 bg-gray-50">
                       <tr>
                         <th className="p-2 whitespace-nowrap">
