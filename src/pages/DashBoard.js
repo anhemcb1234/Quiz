@@ -51,7 +51,7 @@ function DashBoard() {
       }
   })
   setResult(cloneData)
-  },[result])
+  },[])
   return (
     <>
       <div className="bg-white p-8 rounded-md w-full">
