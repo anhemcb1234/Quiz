@@ -51,7 +51,7 @@ export default function ChooseQuiz() {
     <>
       <div class="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-white dark:bg-gray-700 text-black dark:text-white">
         <div class="fixed w-full flex items-center justify-between h-14 text-white z-10">
-          <div class="flex items-center justify-start md:justify-center pl-3 w-14 md:w-64 h-14 bg-blue-800 dark:bg-gray-800 border-none">
+          <div class="flex items-center justify-start md:justify-center pl-3 w-14 md:w-64 h-14 bg-violet-800 dark:bg-gray-800 border-none">
             <img
               class="w-7 h-7 md:w-10 md:h-10 mr-2 rounded-md overflow-hidden"
               src="https://therminic2018.eu/wp-content/uploads/2018/07/dummy-avatar.jpg"
@@ -60,7 +60,7 @@ export default function ChooseQuiz() {
               {localStorage.getItem("userName")}
             </span>
           </div>
-          <div class="flex w-screen justify-between items-center h-14 bg-blue-800 dark:bg-gray-800 header-right">
+          <div class="flex w-screen justify-between items-center h-14 bg-violet-800 dark:bg-gray-800 header-right">
             <div class="bg-white rounded flex items-center w-full max-w-xl mr-4 p-2 shadow-sm border border-gray-200">
               <button class="outline-none focus:outline-none">
                 <svg
@@ -91,7 +91,7 @@ export default function ChooseQuiz() {
                 <a
                   href="#"
                   onClick={() => handlerLogout()}
-                  class="flex items-center mr-4 hover:text-blue-100"
+                  class="flex items-center mr-4 hover:text-violet-100"
                 >
                   <span class="inline-flex mr-1">
                     <svg
@@ -115,7 +115,7 @@ export default function ChooseQuiz() {
             </ul>
           </div>
         </div>
-        <div class="fixed flex flex-col top-14 left-0 w-14 hover:w-64 md:w-64 bg-blue-900 dark:bg-gray-900 h-full text-white transition-all duration-300 border-none z-10 sidebar">
+        <div class="fixed flex flex-col top-14 left-0 w-14 hover:w-64 md:w-64 bg-violet-900 dark:bg-gray-900 h-full text-white transition-all duration-300 border-none z-10 sidebar">
           <div class="overflow-y-auto overflow-x-hidden flex flex-col justify-between flex-grow">
             <ul class="flex flex-col py-4 space-y-1">
               <li class="px-5 hidden md:block">
@@ -129,7 +129,7 @@ export default function ChooseQuiz() {
                 <Link to={`/dashboard?UserName=${userName}`}>
                   <a
                     href="#"
-                    class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6"
+                    class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-violet-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-violet-500 dark:hover:border-gray-800 pr-6"
                   >
                     <span class="inline-flex justify-center items-center ml-4">
                       <svg
@@ -157,7 +157,7 @@ export default function ChooseQuiz() {
                 <Link to={`/ranking`}>
                   <a
                     href="#"
-                    class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6"
+                    class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-violet-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-violet-500 dark:hover:border-gray-800 pr-6"
                   >
                     <span class="inline-flex justify-center items-center ml-4">
                       <svg
@@ -179,13 +179,46 @@ export default function ChooseQuiz() {
                     <span class="ml-2 text-sm tracking-wide truncate">
                       Ranking
                     </span>
-                    <span class="hidden md:block px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-blue-500 bg-indigo-50 rounded-full">
+                    <span class="hidden md:block px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-violet-500 bg-indigo-50 rounded-full">
                       New
                     </span>
                   </a>
                 </Link>
               </li>
-              
+              <li class="px-5 hidden md:block">
+                <div class="flex flex-row items-center mt-5 h-8">
+                  <div class="text-sm font-light tracking-wide text-gray-400 uppercase">
+                    Settings
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-violet-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-violet-500 dark:hover:border-gray-800 pr-6"
+                >
+                  <span class="inline-flex justify-center items-center ml-4">
+                    <svg
+                      class="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <span class="ml-2 text-sm tracking-wide truncate">
+                    Profile
+                  </span>
+                </a>
+              </li>
+            
             </ul>
             <p class="mb-14 px-5 py-3 hidden md:block text-center text-xs">
               Copyright @2021
@@ -194,8 +227,8 @@ export default function ChooseQuiz() {
         </div>
 
         <div class="h-full ml-14 mt-14 mb-10 md:ml-64">
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 p-4 gap-4">
-            <div class="bg-blue-500 dark:bg-gray-800 shadow-lg rounded-md flex items-center justify-between p-3 border-b-4 border-blue-600 dark:border-gray-600 text-white font-medium group">
+          <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 p-4 gap-4">
+            <div class="bg-violet-500 dark:bg-gray-800 shadow-lg rounded-md flex items-center justify-between p-3 border-b-4 border-violet-600 dark:border-gray-600 text-white font-medium group">
               <div class="flex justify-center items-center w-14 h-14 bg-white rounded-full transition-all duration-300 transform group-hover:rotate-12">
                 <svg
                   width="30"
@@ -203,7 +236,7 @@ export default function ChooseQuiz() {
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  class="stroke-current text-blue-800 dark:text-gray-800 transform transition-transform duration-500 ease-in-out"
+                  class="stroke-current text-violet-800 dark:text-gray-800 transform transition-transform duration-500 ease-in-out"
                 >
                   <path
                     stroke-linecap="round"
@@ -218,7 +251,7 @@ export default function ChooseQuiz() {
                 <p>User</p>
               </div>
             </div>
-            <div class="bg-blue-500 dark:bg-gray-800 shadow-lg rounded-md flex items-center justify-between p-3 border-b-4 border-blue-600 dark:border-gray-600 text-white font-medium group">
+            <div class="bg-violet-500 dark:bg-gray-800 shadow-lg rounded-md flex items-center justify-between p-3 border-b-4 border-violet-600 dark:border-gray-600 text-white font-medium group">
               <div class="flex justify-center items-center w-14 h-14 bg-white rounded-full transition-all duration-300 transform group-hover:rotate-12">
                 <svg
                   width="30"
@@ -226,7 +259,7 @@ export default function ChooseQuiz() {
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  class="stroke-current text-blue-800 dark:text-gray-800 transform transition-transform duration-500 ease-in-out"
+                  class="stroke-current text-violet-800 dark:text-gray-800 transform transition-transform duration-500 ease-in-out"
                 >
                   <path
                     stroke-linecap="round"
@@ -255,7 +288,7 @@ export default function ChooseQuiz() {
                         <div className="font-semibold text-left">Exam</div>
                       </th>
                       <th className="p-2 whitespace-nowrap">
-                        <div className="font-semibold text-left">
+                        <div className="font-semibold text-center">
                           Time limit
                         </div>
                       </th>
@@ -282,12 +315,12 @@ export default function ChooseQuiz() {
                           </div>
                         </td>
                         <td className="p-2 whitespace-nowrap">
-                          <div className="text-left">{item?.time_limit}</div>
+                          <div className="text-center">{item?.time_limit}</div>
                         </td>
-                        <td className="p-2 whitespace-nowrap">
+                        <td className="p-2 flex items-center justify-center whitespace-nowrap">
                           <Link to={`/quiz?id=${item?.id}`}>
-                            <button className="float-right w-full hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 bg-indigo-600 text-white text-sm font-bold tracking-wide rounded-full px-5 py-2">
-                              {item?.exam_name}
+                            <button className="hover:bg-indigo-700 active:bg-green-700 focus:outline-none focus:ring focus:ring-green-300 bg-green-600 text-white text-sm font-bold tracking-wide rounded-full px-5 py-2">
+                              Start
                             </button>
                           </Link>
                         </td>
@@ -296,7 +329,7 @@ export default function ChooseQuiz() {
                   </tbody>
                 </table>
               </div>
-              <div class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-500 uppercase border-t dark:border-gray-700 bg-gray-50 sm:grid-cols-9 dark:text-gray-400 dark:bg-gray-800">
+              <div class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-500 uppercase border-t dark:border-gray-700 bg-gray-50 grid-cols-2 dark:text-gray-400 dark:bg-gray-800">
                 <span class="flex items-center col-span-3">
                   {" "}
                   Showing 1-10 of 100{" "}
@@ -324,7 +357,7 @@ export default function ChooseQuiz() {
                         </button>
                       </li>
                       <li>
-                        <button class="px-3 py-1 text-white dark:text-gray-800 transition-colors duration-150 bg-blue-600 dark:bg-gray-100 border border-r-0 border-blue-600 dark:border-gray-100 rounded-md focus:outline-none focus:shadow-outline-purple">
+                        <button class="px-3 py-1 text-white dark:text-gray-800 transition-colors duration-150 bg-violet-600 dark:bg-gray-100 border border-r-0 border-violet-600 dark:border-gray-100 rounded-md focus:outline-none focus:shadow-outline-purple">
                           1
                         </button>
                       </li>
@@ -472,7 +505,7 @@ export default function ChooseQuiz() {
                     name="name"
                     id="name"
                     placeholder="Full Name"
-                    class="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 dark:text-gray-50 font-semibold focus:border-blue-500 focus:outline-none"
+                    class="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 dark:text-gray-50 font-semibold focus:border-violet-500 focus:outline-none"
                   />
                 </div>
 
@@ -485,7 +518,7 @@ export default function ChooseQuiz() {
                     name="email"
                     id="email"
                     placeholder="Email"
-                    class="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 dark:text-gray-50 font-semibold focus:border-blue-500 focus:outline-none"
+                    class="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 dark:text-gray-50 font-semibold focus:border-violet-500 focus:outline-none"
                   />
                 </div>
 
@@ -498,13 +531,13 @@ export default function ChooseQuiz() {
                     name="tel"
                     id="tel"
                     placeholder="Telephone Number"
-                    class="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 dark:text-gray-50 font-semibold focus:border-blue-500 focus:outline-none"
+                    class="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 dark:text-gray-50 font-semibold focus:border-violet-500 focus:outline-none"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  class="md:w-32 bg-blue-600 dark:bg-gray-100 text-white dark:text-gray-800 font-bold py-3 px-6 rounded-lg mt-4 hover:bg-blue-500 dark:hover:bg-gray-200 transition ease-in-out duration-300"
+                  class="md:w-32 bg-violet-600 dark:bg-gray-100 text-white dark:text-gray-800 font-bold py-3 px-6 rounded-lg mt-4 hover:bg-violet-500 dark:hover:bg-gray-200 transition ease-in-out duration-300"
                 >
                   Submit
                 </button>
