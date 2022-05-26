@@ -6,10 +6,11 @@ function DashBoard() {
   const [data, setData] = useState([]);
   const [searchParam] = useSearchParams();
   const [result, setResult] = useState([]);
-  const [resultAnswer, setResultAnswer] = useState([]);
+  const [count, setCount] = useState(1);
   const [idUser, setIdUser] = useState(() => {
     return localStorage.getItem("idUser");
   });
+
   const red = "text-red-500";
   useEffect(() => {
     (async () => {
@@ -23,35 +24,31 @@ function DashBoard() {
     })();
   }, []);
   useEffect(() => {
-    let wrong = 0;
-    let correct = 0;
-    for(let i in data.resultDTOS){
-    if(data.resultDTOS[i].mark ==0){
-        wrong += 1
-    } else {
-        correct +=1
+    let time = setTimeout(() => {
+      setCount(count - 1);
+    }, 200);
+    if (count <= 0) {
+      clearTimeout(time);
     }
-    setResultAnswer({
-        correct,
-        wrong
-    })
-}
-  },[])
+    return () => {
+      clearTimeout(time);
+    };
+  }, []);
   useEffect(() => {
-  let cloneData = [...data]
-    cloneData.map(x => {
-      let correct = 0
-      let wrong = 0
-      for(let i in x.resultDTOS) {
-          if(x.resultDTOS[i].mark == 0) {
-              x.wrong = wrong += 1
-          } else {
-              x.correct = correct += 1
-          }
+    let cloneData = [...data];
+    cloneData.map((x) => {
+      let correct = 0;
+      let wrong = 0;
+      for (let i in x.resultDTOS) {
+        if (x.resultDTOS[i].mark == 0) {
+          x.wrong = wrong += 1;
+        } else {
+          x.correct = correct += 1;
+        }
       }
-  })
-  setResult(cloneData)
-  },[])
+    });
+    setResult(cloneData);
+  }, [count]);
   return (
     <>
       <div className="bg-white p-8 rounded-md w-full">
@@ -63,7 +60,8 @@ function DashBoard() {
           <div className="flex items-center justify-between">
             <div className="lg:ml-40  ml-10 space-x-8">
               <Link
-                to={`/choose-quiz`}
+                to={`/choose-quiz
+                `}
               >
                 <button className="bg-red-600 sm:h-10 md:h-14 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer">
                   Go to Home page
@@ -104,18 +102,33 @@ function DashBoard() {
                           </div>
                         </td>
                         <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                          <p className={item.correct ? "text-gray-900 whitespace-no-wrap" : red + " text-gray-900 whitespace-no-wrap"}>
+                          <p
+                            className={
+                              item.correct
+                                ? "text-gray-900 whitespace-no-wrap"
+                                : red + " font-bold whitespace-no-wrap"
+                            }
+                          >
                             {item.correct || 0}
                           </p>
                         </td>
                         <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                          <p className={item.wrong ?  "text-gray-900 whitespace-no-wrap" :red + " text-gray-900 whitespace-no-wrap"}>
+                          <p
+                            className={
+                              item.wrong
+                                ? "text-gray-900 whitespace-no-wrap"
+                                : red + " font-bold  whitespace-no-wrap"
+                            }
+                          >
                             {item.wrong || 0}
                           </p>
                         </td>
                         <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                           <p className="text-gray-900 whitespace-no-wrap">
-                            {item?.resultDTOS?.reduce((acc, int) => acc += int.mark,0)}
+                            {item?.resultDTOS?.reduce(
+                              (acc, int) => (acc += int.mark),
+                              0
+                            )}
                           </p>
                         </td>
                       </tr>
