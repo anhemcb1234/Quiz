@@ -46,7 +46,7 @@ const SignUp = () => {
           id="toast-warning"
           class="flex absolute items-center w-full max-w-xs p-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800"
           role="alert"
-          style={{top:'13%',left:'7%'}}
+          style={{top:'14%',right:'50%'}}
         >
           <div className="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-orange-500 bg-orange-100 rounded-lg dark:bg-orange-700 dark:text-orange-200">
             <svg
@@ -95,7 +95,7 @@ const SignUp = () => {
           id="toast-success"
           className="flex absolute items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800"
           role="alert"
-          style={{top:'13%',left:'7%'}}
+          style={{top:'14%',right:'50%'}}
         >
           <div className="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
             <svg
@@ -138,8 +138,7 @@ const SignUp = () => {
       )}
       <div className="min-w-screen min-h-screen bg-gray-900 flex items-center justify-center px-5 py-5">
         <div
-          className="bg-gray-100 text-gray-500 rounded-3xl shadow-xl w-full overflow-hidden"
-          style={{ maxWidth: "1000px" }}
+          className="bg-gray-100 w-full text-gray-500 rounded-3xl shadow-xl w-full overflow-hidden"
         >
           <div className="md:flex w-full">
             <div className="hidden md:block w-1/2 bg-indigo-500 py-10 px-10">
