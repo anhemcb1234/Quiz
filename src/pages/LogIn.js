@@ -22,7 +22,7 @@ const Login = () => {
       setShowLogin(true);
       setTimeout(() => {
         navigate(`/choose-quiz`);
-      }, 2000);
+      }, 1000);
     } catch (e) {
       navigate("/");
       setShowToast(true);
