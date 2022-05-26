@@ -288,7 +288,7 @@ export default function ChooseQuiz() {
                       </th>
                       <th className="p-2 whitespace-nowrap">
                         <div className="font-semibold text-center">
-                          Time limit
+                          Total number of questions
                         </div>
                       </th>
                       <th className="p-2 whitespace-nowrap">
@@ -319,7 +319,7 @@ export default function ChooseQuiz() {
                             </td>
                             <td className="p-2 whitespace-nowrap">
                               <div className="text-center">
-                                {item?.time_limit}
+                                {item?.questionDtos.length}
                               </div>
                             </td>
                             <td className="p-2 flex items-center justify-center whitespace-nowrap">
