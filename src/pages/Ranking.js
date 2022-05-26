@@ -74,7 +74,7 @@ function Ranking() {
                 <Link to="/choose-quiz">
                   <button
                     type="button"
-                    className="border sm:h-4 md:h-4  border-red-500 bg-red-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline"
+                    className="border  border-red-500 bg-red-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline"
                   >
                     Go to home page
                   </button>
@@ -110,7 +110,7 @@ function Ranking() {
                               <td key={index} className="p-4 whitespace-nowrap">
                                 <div className="flex items-center">
                                   <div className="font-medium text-center text-gray-800">
-                                    {index + 1}
+                                    {index + 1 }
                                   </div>
                                 </div>
                               </td>
