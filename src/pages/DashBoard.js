@@ -32,7 +32,6 @@ function DashBoard() {
     }
     return () => {
       clearTimeout(time);
-      setShow(false);
     };
   }, []);
   useEffect(() => {
