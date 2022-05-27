@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { examsServices } from "../services/examsServices";
-
 export default function ChooseQuiz() {
   const [exams, setExams] = useState([]);
   const [showToast, setShowToast] = useState(false);
@@ -49,7 +48,7 @@ export default function ChooseQuiz() {
   }, []);
   return (
     <>
-      <div className="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-white dark:bg-gray-700 text-black dark:text-white">
+      <div className="min-h-screen  flex flex-col flex-auto flex-shrink-0 antialiased bg-white dark:bg-gray-700 text-black dark:text-white">
         <div className="fixed w-full flex items-center justify-between h-14 text-white z-10">
           <div className="flex items-center justify-start md:justify-center pl-3 w-14 md:w-64 h-14 bg-violet-800 dark:bg-gray-800 border-none">
             <img
@@ -109,7 +108,7 @@ export default function ChooseQuiz() {
                       ></path>
                     </svg>
                   </span>
-                  Logout
+                  Log out
                 </a>
               </li>
             </ul>
@@ -219,6 +218,7 @@ export default function ChooseQuiz() {
                 </a>
               </li>
             </ul>
+
             <p className="mb-14 px-5 py-3 hidden md:block text-center text-xs">
               Copyright @2021
             </p>
@@ -335,88 +335,6 @@ export default function ChooseQuiz() {
                     ))}
                   </tbody>
                 </table>
-              </div>
-              <div className="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-500 uppercase border-t dark:border-gray-700 bg-gray-50 grid-cols-2 dark:text-gray-400 dark:bg-gray-800">
-                <span className="flex items-center col-span-3">
-                  {" "}
-                  Showing 1-10 of 100{" "}
-                </span>
-                <span className="col-span-2"></span>
-                <span className="flex col-span-4 mt-2 sm:mt-auto sm:justify-end">
-                  <nav aria-label="Table navigation">
-                    <ul className="inline-flex items-center">
-                      <li>
-                        <button
-                          className="px-3 py-1 rounded-md rounded-l-lg focus:outline-none focus:shadow-outline-purple"
-                          aria-label="Previous"
-                        >
-                          <svg
-                            aria-hidden="true"
-                            className="w-4 h-4 fill-current"
-                            viewBox="0 0 20 20"
-                          >
-                            <path
-                              d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-                              clipRule="evenodd"
-                              fillRule="evenodd"
-                            ></path>
-                          </svg>
-                        </button>
-                      </li>
-                      <li>
-                        <button className="px-3 py-1 text-white dark:text-gray-800 transition-colors duration-150 bg-violet-600 dark:bg-gray-100 border border-r-0 border-violet-600 dark:border-gray-100 rounded-md focus:outline-none focus:shadow-outline-purple">
-                          1
-                        </button>
-                      </li>
-                      <li>
-                        <button className="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple">
-                          2
-                        </button>
-                      </li>
-                      <li>
-                        <button className="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple">
-                          3
-                        </button>
-                      </li>
-                      <li>
-                        <button className="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple">
-                          4
-                        </button>
-                      </li>
-                      <li>
-                        <span className="px-3 py-1">...</span>
-                      </li>
-                      <li>
-                        <button className="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple">
-                          8
-                        </button>
-                      </li>
-                      <li>
-                        <button className="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple">
-                          9
-                        </button>
-                      </li>
-                      <li>
-                        <button
-                          className="px-3 py-1 rounded-md rounded-r-lg focus:outline-none focus:shadow-outline-purple"
-                          aria-label="Next"
-                        >
-                          <svg
-                            className="w-4 h-4 fill-current"
-                            aria-hidden="true"
-                            viewBox="0 0 20 20"
-                          >
-                            <path
-                              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                              clipRule="evenodd"
-                              fillRule="evenodd"
-                            ></path>
-                          </svg>
-                        </button>
-                      </li>
-                    </ul>
-                  </nav>
-                </span>
               </div>
             </div>
           </div>
