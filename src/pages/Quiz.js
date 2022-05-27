@@ -213,7 +213,7 @@ const Quiz = () => {
                 <p className="font-bold w-full text-2xl text-indigo-700">
                   {questions[questionId]?.question_content}
                 </p>
-                {questions[questionId]?.image_url ? <img className="w-full rounded mb-2 h-20 object-cover" src={"http://18.136.124.246:9998/images/"+questions[questionId]?.image_url}/> : null}
+                {questions[questionId]?.image_url ? <img className="w-full rounded mb-2 h-20 object-contain h-screen" src={"http://18.136.124.246:9998/images/"+questions[questionId]?.image_url}/> : null}
                 {questions[questionId]?.answerDTOS?.map((item, index) => (
                   <div className="mx-2 flex items-center" key={index}>                    
                     <input
